@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Deep Thought</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-content">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="">
+        </div>
+        <ul class="nav-links">
+          <li><img src="./assets/home.png" alt=""></li>
+          <li><img src="./assets/settings.png" alt=""></li>
+          <li><img src="./assets/bell.png" alt=""></li>
+          <li><img src="./assets/profile.png" alt=""></li>
+          <li><img src="./assets/more.png" alt="" class="more-icon"></li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      let nav = document.querySelector("nav");
+      window.onscroll = function() {
+        if (document.documentElement.scrollTop > 20) {
+          nav.classList.add("sticky");
+        } else {
+          nav.classList.remove("sticky");
+        }
+      }
+    </script>
+    <!-- Navbar -->
+
+    <!-- Home Body -->
+
+    <!-- Left Sliding Window -->
+    <div class="body-container">
+      <div class="sliding-panel" id="slidingPanelLeft">
+        <div class="journey" id="journeyText">
+          <p>Journey Board</p>
+        </div>
+        <div class="journey-text" id="journeyList">
+          <ul>
+            <li class="li-light">Explore the world of management</li>
+            <li>Technical Project Management</li>
+            <li>Structure your pointers</li>
+            <li>4SA Method</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="content-project">
+          <div class="project-task">
+            <h1 id="project-title"></h1>
+            <button class="submit-now">Submit Now</button>
+          </div>
+          <div class="task-box">
+            <h2 id="task-title"></h2>
+            <p id="task-description"></p>
+          </div>
+        </div>
+
+        <!-- Cards -->
+         <div class="card-align">
+         <div class="cards-main">
+            <div class="cards-sub">
+                <div class="card" id="card1">
+                    <div class="card-header">
+                        <p id="card1-header"></p>
+                        <img src="./assets/info.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-desc">
+                            <p><div class="desc">Description: &nbsp;</div><span class="card-desc-light" id="card4-description"> </span></p>
+                        </div>
+                        <div class="card-other" id="card1-other"></div>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="card-header">
+                        <p id="card2-header"></p>
+                        <img src="./assets/info.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-desc">
+                            <p><div class="desc">Description: &nbsp;</div><span id="card4-description"> </span></p>
+                        </div>
+                        <div class="card-other" id="card2-other">
+                          <div class="thread-a">
+                            <img src="./assets/dropdown.png" alt="">
+                            <p>Thread A</p>
+                          </div>
+                          <div class="thread-a-body">
+                            <div class="sub-thread">
+                              <div class="sub-thread-1">
+                                <div class="sub-thread-back">Sub thread 1</div>
+                                <input placeholder="Enter Text here" type="text" class="sub-thread-input"/>
+                                <div class="thread-icons">
+                                  <img src="./assets/bulb.png" alt="">
+                                  <img src="./assets/msg.png" alt="">
+                                  <img src="./assets/question.png" alt="">
+                                  <img src="./assets/flower.png" alt="">
+                                </div>
+                              </div>
+                              <div class="sub-thread-1">
+                                <div class="sub-thread-back">Sub Interpretation 1</div>
+                                <input placeholder="Enter Text here" type="text" class="sub-thread-input"/>
+                                <div class="thread-dropdown">
+                                  <select name="category" id="" class="drop-down">
+                                    <option value="">Select Category</option>
+                                    <option value="">Category</option>
+                                    <option value="">Category</option>
+                                  </select>
+
+                                  <select name="process" id="" class="drop-down">
+                                    <option value="">Select Process</option>
+                                    <option value="">Process</option>
+                                    <option value="">Process</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="sub-thread-btn"><button class="btn-sub-thread">+ Sub Thread</button></div>
+                            <div class="sub-thread-2">
+                              <div class="sub-thread-back">Summary for Text A</div>
+                              <input placeholder="Enter Text here" type="text" class="sub-thread-input"/>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-sub">
+                <div class="card" id="card3">
+                    <div class="card-header">
+                        <p id="card3-header"></p>
+                        <img src="./assets/info.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-desc">
+                            <p><div class="desc">Description: &nbsp;</div><span class="card-desc-light" id="card4-description"> </span></p>
+                        </div>
+                        <div class="card-other" id="card3-other">
+                          <div class="pointer-card">
+                            <label for="">Title</label>
+                            <input type="text" class="pointer-card-input"/>
+                            <label for="">Content</label>
+                            <div class="file-block">
+                              <div class="options-div">
+                                <ul class="options-list">
+                                  <li class="options-edit">File</li>
+                                  <li class="options-edit">Edit</li>
+                                  <li class="options-edit">View</li>
+                                  <li class="options-edit">Insert</li>
+                                  <li class="options-edit">Format</li>
+                                  <li class="options-edit">Tools</li>
+                                  <li class="options-edit">Table</li>
+                                  <li class="options-edit">Help</li>
+                                </ul>
+                              </div>
+                              <div class="icons-div">
+                                <img src="./assets/left.png" alt="">
+                                <img src="./assets/right.png" alt="">
+                                <img src="./assets/box.png" alt="">
+                                <div class="options-para">Paragraph</div>
+                                <img src="./assets/more-gray.png" alt="" class="more-gray">
+                              </div>
+                              <div class="options-input"><input type="text"></div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="card4">
+                    <div class="card-header">
+                        <p id="card4-header"></p>
+                        <img src="./assets/info.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-desc">
+                            <p><div class="desc">Description: &nbsp;</div><span id="card4-description"> </span></p>
+                        </div>
+                        <div class="card-other" id="card4-other">
+                          <div class="intro-body">
+                            <div class="intro">
+                              <div class="intro-title">
+                                <img src="./assets/dropdown.png" alt="">
+                                <p>Introduction</p>
+                              </div>
+                              <div class="intro-para">The 4SA Method , How to bring a idea into progress ?</div>
+                              <div class="intro-seemore">See More</div>
+                            </div>
+  
+                            <div class="intro">
+                              <div class="intro-title-thread">
+                                <img src="./assets/dropdown.png" alt="">
+                                <p>Thread A</p>
+                              </div>
+                              <div class="intro-para">How are you going to develop your stratergy ? Which method are you going to use to develop a stratergy ? What if the project is lengthy?</div>
+                              <div class="intro-seemore">See More</div>
+                            </div>
+
+                            <div class="example">
+                              <div class="intro-title-thread-1">
+                                <p>Example 1</p>
+                              </div>
+                              <div class="intro-para-1">You have a concept , How will you put into progress?</div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="help-icons">
+        <div class="accessibility-icons"><img src="./assets/question-mark.png" alt=""></div>
+        <div class="accessibility-icons"><img src="./assets/group.png" alt=""></div>
+        <div class="accessibility-icons"><img src="./assets/calendar.png" alt=""></div>
+      </div>
+
+    </div>
+
+      <!-- Right Sliding Window -->
+      <div class="sliding-panel-right" id="slidingPanelRight">
+        <div class="notion" id="journeyTextRight">
+            <img src="./assets/close.png" alt="">
+            <p class="vertical-text">Notion Board</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Body -->
+
+    <script>
+
+async function fetchAndRenderProjectData() {
+  try {
+    const response = await fetch('./data.json'); // Use ./data.json to ensure the correct path
+    const data = await response.json();
+    renderProjectData(data);
+  } catch (error) {
+    console.error('Error fetching or parsing data:', error);
+  }
+}
+
+       function renderProjectData(data) {
+  const projectTitle = document.getElementById('project-title');
+  projectTitle.textContent = data.title;
+
+  const taskTitle = document.getElementById('task-title');
+  taskTitle.textContent = data.tasks[0].task_title; // Assuming you want the first task's title
+
+  const taskDescription = document.getElementById('task-description');
+  taskDescription.textContent = data.tasks[0].task_description; // Assuming you want the first task's description
+
+  const cards = document.querySelectorAll('.card');
+  data.tasks[0].assets.forEach((asset, index) => {
+    if (index < cards.length) {
+      const card = cards[index];
+      const cardHeader = card.querySelector('.card-header p');
+      cardHeader.textContent = asset.asset_title;
+
+      const descTitle = card.querySelector('.card-desc span');
+      descTitle.textContent = asset.asset_description;
+
+      const cardOther = card.querySelector('.card-other');
+      cardOther.innerHTML = ''; // Clear existing content
+      if (asset.asset_content_type === 'video') {
+        const videoFrame = document.createElement('iframe');
+        videoFrame.src = asset.asset_content;
+        videoFrame.width = "480";
+        videoFrame.height = "291";
+        videoFrame.allowFullscreen = true;
+        cardOther.appendChild(videoFrame);
+      }
+    }
+  });
+}
+
+// Call the function to load and render data on page load
+fetchAndRenderProjectData();
+      </script>
+
+    <script>
+      document.getElementById("slidingPanelLeft").addEventListener("click", function() {
+        this.classList.toggle("open");
+        document.getElementById("journeyText").classList.toggle("visible");
+        document.getElementById("journeyList").classList.toggle("visible");
+      });
+
+      document.getElementById("slidingPanelRight").addEventListener("click", function() {
+        this.classList.toggle("open");
+        document.getElementById("journeyTextRight").classList.toggle("visible");
+        document.getElementById("journeyListRight").classList.toggle("visible");
+      });
+    </script>
+  </body>
+  </html>
